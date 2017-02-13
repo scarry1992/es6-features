@@ -2,10 +2,10 @@ const webpack = require('webpack'),
     path = require('path');
 
 module.exports = {
-    entry: './index.js',
+    entry: './app.js',
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: 'app.js',
+        path: path.resolve(__dirname, '/dist'),
         publicPath: '/assets/'
     },
     resolve: {
@@ -17,11 +17,14 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel',
-                exclude: 'node_modules'
+                exclude: /node_modules/
             }
         ]
     },
     watch: true,
+    watchOptions: {
+        aggregateTimeout: 100
+    },
     devServer: {
         inline: true
     },

@@ -1,0 +1,23 @@
+let sym = Symbol();
+
+console.log(typeof sym);//symbol
+
+let symName = Symbol('name');
+
+console.log(symName.toString());//Symbol(name)
+
+console.log(Symbol('name') == Symbol('name'));//false
+
+let symUser = Symbol.for('user');//глобальный реестр
+
+console.log(symUser == Symbol.for('user'));//true
+
+console.log(Symbol.keyFor('user'));//user только для глобального реестра
+
+let obj = {
+    iterator: 1,
+    [Symbol.iterator]: ()=>(1)
+};
+
+console.log(Object.getOwnPropertySymbols(obj));//Symbol(Symbol.iterator)
+console.log(Object.getOwnPropertyNames(obj));//iterator

@@ -3,4 +3,6 @@
 //import './src/strings'
 //import './src/objectsAndPrototypes'
 //import './src/classes'
-import './src/iterators'
+//import './src/iterators'
+//import './src/maps'
+import './src/promise'

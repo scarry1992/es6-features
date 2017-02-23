@@ -5,4 +5,6 @@
 //import './src/classes'
 //import './src/iterators'
 //import './src/maps'
-import './src/promise'
+//import './src/promise'
+import 'babel-polyfill';//для использования генераторов
+import './src/generators'

@@ -5,7 +5,7 @@ module.exports = {
     entry: './app.js',
     output: {
         filename: 'app.js',
-        path: path.resolve(__dirname, '/dist'),
+        path: path.resolve(__dirname, 'dist'),
         publicPath: '/assets/'
     },
     resolve: {
@@ -18,7 +18,16 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel',
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.json$/,
+                loader: 'file',
+                include: /src/,
+                query: {
+                    name: '[name].[ext]',
+                    publicPath: 'assets/'
+                }
+            },
         ]
     },
     watch: true,

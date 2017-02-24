@@ -6,5 +6,6 @@
 //import './src/iterators'
 //import './src/maps'
 //import './src/promise'
-import 'babel-polyfill';//для использования генераторов
-import './src/generators'
+//import 'babel-polyfill';//для использования генераторов
+//import './src/generators'
+import './src/proxy'
